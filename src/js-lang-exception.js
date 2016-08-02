@@ -84,7 +84,8 @@
     /**
      * Constructor of the Exception
      *
-     * @constructor Exception
+     * @public
+     * @class Exception
      * @alias module:js/lang/Exception
      *
      * @param {string|Array|null} [message=null]
@@ -158,6 +159,91 @@
     Exception.prototype.constructor = Exception;
 
     /**
+     * @public
+     * @instance
+     * @function hasMessage
+     * @memberOf module:js/lang/Exception
+     *
+     * @returns {boolean}
+     */
+    Exception.prototype.hasMessage = function() {
+        return this._message.formatted !== '';
+    };
+
+    /**
+     * @public
+     * @instance
+     * @function getMessage
+     * @memberOf module:js/lang/Exception
+     *
+     * @returns {string}
+     */
+    Exception.prototype.getMessage = function() {
+        return this._message.formatted;
+    };
+
+    /**
+     * @public
+     * @instance
+     * @function hasID
+     * @memberOf module:js/lang/Exception
+     *
+     * @returns {boolean}
+     */
+    Exception.prototype.hasID = function() {
+        return this._id !== null;
+    };
+
+    /**
+     * @public
+     * @instance
+     * @function getID
+     * @memberOf module:js/lang/Exception
+     *
+     * @returns {number}
+     */
+    Exception.prototype.getID = function() {
+        return this._id;
+    };
+
+    /**
+     * @public
+     * @instance
+     * @function hasData
+     * @memberOf module:js/lang/Exception
+     *
+     * @returns {boolean}
+     */
+    Exception.prototype.hasData = function() {
+        return this._data !== null;
+    };
+
+    /**
+     * @public
+     * @instance
+     * @function getData
+     * @memberOf module:js/lang/Exception
+     *
+     * @returns {*|null}
+     */
+    Exception.prototype.getData = function() {
+        return this._data;
+    };
+
+    /**
+     * @protected
+     * @instance
+     * @function format
+     * @memberOf module:js/lang/Exception
+     *
+     * @returns {string}
+     */
+    Exception.prototype.format = function() {
+
+    };
+
+    /**
+     * @public
      * @instance
      * @function throw
      * @memberOf module:js/lang/Exception
@@ -179,72 +265,6 @@
         }
 
         this.stack = (new Error()).stack;
-    };
-
-    /**
-     * @instance
-     * @function hasMessage
-     * @memberOf module:js/lang/Exception
-     *
-     * @returns {boolean}
-     */
-    Exception.prototype.hasMessage = function() {
-        return this._message.formatted !== '';
-    };
-
-    /**
-     * @instance
-     * @function getMessage
-     * @memberOf module:js/lang/Exception
-     *
-     * @returns {string}
-     */
-    Exception.prototype.getMessage = function() {
-        return this._message.formatted;
-    };
-
-    /**
-     * @instance
-     * @function hasID
-     * @memberOf module:js/lang/Exception
-     *
-     * @returns {boolean}
-     */
-    Exception.prototype.hasID = function() {
-        return this._id !== null;
-    };
-
-    /**
-     * @instance
-     * @function getID
-     * @memberOf module:js/lang/Exception
-     *
-     * @returns {number}
-     */
-    Exception.prototype.getID = function() {
-        return this._id;
-    };
-
-    /**
-     * @instance
-     * @function hasData
-     * @memberOf module:js/lang/Exception
-     *
-     * @returns {boolean}
-     */
-    Exception.prototype.hasData = function() {
-        return this._data !== null;
-    };
-
-    /**
-     * @instance
-     * @function getData
-     * @memberOf module:js/lang/Exception
-     *
-     * @returns {*|null}
-     */
-    Exception.prototype.getData = function() {
-        return this._data;
     };
 
     /**
