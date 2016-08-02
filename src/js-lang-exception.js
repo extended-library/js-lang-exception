@@ -83,8 +83,6 @@
     /**
      * Constructor of the Exception
      *
-     * @name Exception
-     *
      * @constructor
      * @alias module:js/lang/Exception
      *
@@ -162,7 +160,7 @@
      * @public
      * @instance
      * @function hasMessage
-     * @memberOf Exception
+     * @memberOf module:js/lang/Exception.Exception
      *
      * @returns {boolean}
      */
@@ -174,7 +172,7 @@
      * @public
      * @instance
      * @function getMessage
-     * @memberOf Exception
+     * @memberOf module:js/lang/Exception.Exception
      *
      * @returns {string}
      */
