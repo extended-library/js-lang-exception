@@ -2,7 +2,7 @@
  * @overview An extendable, testable and intuitively usable **error-handling Exception class** built on
  *           the standard, built-in Error object.
  *
- * @module js/lang/Exception
+ * @namespace js.lang
  * @version 0.0.0
  *
  * @author Richard King <richrdkng@gmail.com> [GitHub]{@link https://github.com/richrdkng}
@@ -83,8 +83,8 @@
     /**
      * Constructor of the Exception
      *
-     * @constructor
-     * @alias module:js/lang/Exception
+     * @public
+     * @class Exception
      *
      * @param {string|Array|null} [message=null]
      * @param {int|null}          [id=null]
@@ -160,7 +160,7 @@
      * @public
      * @instance
      * @function hasMessage
-     * @memberOf module:js/lang/Exception.Exception
+     * @memberOf js.lang.Exception
      *
      * @returns {boolean}
      */
@@ -172,7 +172,7 @@
      * @public
      * @instance
      * @function getMessage
-     * @memberOf module:js/lang/Exception.Exception
+     * @memberOf js.lang.Exception
      *
      * @returns {string}
      */
@@ -229,18 +229,6 @@
     };
 
     /**
-     * @protected
-     * @instance
-     * @function format
-     * @memberOf module:js/lang/Exception
-     *
-     * @returns {string}
-     */
-    Exception.prototype.format = function() {
-
-    };
-
-    /**
      * @public
      * @instance
      * @function throw
@@ -263,6 +251,18 @@
         }
 
         this.stack = (new Error()).stack;
+    };
+
+    /**
+     * @protected
+     * @instance
+     * @function format
+     * @memberOf module:js/lang/Exception
+     *
+     * @returns {string}
+     */
+    Exception.prototype.format = function() {
+
     };
 
     return Exception;
