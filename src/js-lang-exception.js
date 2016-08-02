@@ -84,7 +84,7 @@
     /**
      * Constructor of the Exception
      *
-     * @constructor Exception
+     * @class Exception
      * @alias module:js/lang/Exception
      *
      * @param {string|Array|null} [message=null]
@@ -157,6 +157,13 @@
     Exception.prototype = Object.create(Error.prototype);
     Exception.prototype.constructor = Exception;
 
+    /**
+     * @instance
+     * @function throw
+     * @memberOf module:js/lang/Exception
+     *
+     * @returns {void}
+     */
     Exception.prototype.throw = function() {
         var msg = this._message;
 
@@ -174,6 +181,13 @@
         this.stack = (new Error()).stack;
     };
 
+    /**
+     * @instance
+     * @function hasMessage
+     * @memberOf module:js/lang/Exception
+     *
+     * @returns {boolean}
+     */
     Exception.prototype.hasMessage = function() {
         return this._message.formatted !== '';
     };
@@ -190,6 +204,9 @@
     };
 
     /**
+     * @instance
+     * @function hasID
+     * @memberOf module:js/lang/Exception
      *
      * @returns {boolean}
      */
