@@ -1,0 +1,52 @@
+{
+  "name": "js-lang-exception",
+  "version": "0.0.0",
+  "description": "An extendable, testable and intuitively usable error-handling Exception class built on the standard, built-in Error object.",
+  "main": "dist/js-lang-exception.js",
+  "license": "MIT",
+  "homepage": "https://github.com/jsopenstd/js-lang-exception",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsopenstd/js-lang-exception.git"
+  },
+  "author": {
+    "name": "Richard King",
+    "email": "richrdkng@gmail.com",
+    "url": "https://github.com/richrdkng"
+  },
+  "scripts": {
+    "g": "gulp --gulpfile scripts/gulp/main.js",
+    "gulp": "npm run g",
+    "build": "npm run g -- tasks/build",
+    "test": "npm run g -- tasks/test",
+    "ci": "npm run g -- tasks/ci",
+    "coveralls": "coveralls < cov/lcov.info"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "coveralls": "^2.11.11",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-header": "^1.8.7",
+    "gulp-istanbul": "^1.0.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sequence": "^0.4.5",
+    "gulp-uglify": "^1.5.4",
+    "merge2": "^1.0.2",
+    "semver": "^5.3.0"
+  },
+  "keywords": [
+    "js",
+    "lang",
+    "exception",
+    "error",
+    "jsopenstd",
+    "amd",
+    "commonjs",
+    "browser",
+    "umd"
+  ]
+}
