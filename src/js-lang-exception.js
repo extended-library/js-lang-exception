@@ -84,7 +84,7 @@
     /**
      * Constructor of the Exception
      *
-     * @class Exception
+     * @constructor Exception
      * @alias module:js/lang/Exception
      *
      * @param {string|Array|null} [message=null]
