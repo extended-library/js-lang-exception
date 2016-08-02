@@ -1,6 +1,8 @@
 /**
- * @file An extendable, testable and intuitively usable **error-handling Exception class** built on
- *       the standard, **built-in Error** object.
+ | ---------------------------------------------------------------------------------------------------------------------
+ | An extendable, testable and intuitively usable **error-handling Exception class**
+ | built and based on the standard, **built-in Error** object.
+ | ---------------------------------------------------------------------------------------------------------------------
  *
  * @namespace js.lang
  *
@@ -83,7 +85,8 @@
      */
 
     /**
-     * Constructor of the Exception
+     * An extendable, testable and intuitively usable **error-handling Exception class** built and based
+     * on the standard, **built-in Error** object.
      *
      * @public
      * @class Exception
