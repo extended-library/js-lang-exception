@@ -3,7 +3,6 @@
  *           the standard, built-in Error object.
  *
  * @module js/lang/Exception
- *
  * @version 0.0.0
  *
  * @author Richard King <richrdkng@gmail.com> [GitHub]{@link https://github.com/richrdkng}
@@ -86,7 +85,6 @@
      *
      * @public
      * @class Exception
-     * @alias module:js/lang/Exception
      *
      * @param {string|Array|null} [message=null]
      * @param {int|null}          [id=null]
