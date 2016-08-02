@@ -84,8 +84,8 @@
     /**
      * Constructor of the Exception
      *
-     * @class Exception
-     * @memberOf module:js/lang/Exception
+     * @constructor Exception
+     * @alias module:js/lang/Exception
      *
      * @param {string|Array|null} [message=null]
      * @param {int|null}          [id=null]
@@ -94,20 +94,32 @@
      */
     function Exception(message, id, data, throwImmediately) {
 
-            /** @type {Message} */
+            /**
+             * @private
+             * @type {Message}
+             */
         var _message = {
                 raw       : '',
                 formatted : '',
                 args      : [],
             },
 
-            /** @type {number|null} */
+            /**
+             * @private
+             * @type {number|null}
+             */
             _id = null,
 
-            /** @type {*|null} */
+            /**
+             * @private
+             * @type {*|null}
+             */
             _data = null,
 
-            /** @type {boolean} */
+            /**
+             * @private
+             * @type {boolean}
+             */
             _throw = typeof throwImmediately === 'boolean' ? throwImmediately : true;
 
         if (isPresent(message)) {
@@ -169,7 +181,7 @@
     /**
      * @instance
      * @function getMessage
-     * @memberOf module:js/lang/Exception.Exception
+     * @memberOf module:js/lang/Exception
      *
      * @returns {string}
      */
@@ -188,7 +200,7 @@
     /**
      * @instance
      * @function getID
-     * @memberOf module:js/lang/Exception.Exception
+     * @memberOf module:js/lang/Exception
      *
      * @returns {number}
      */
@@ -197,6 +209,9 @@
     };
 
     /**
+     * @instance
+     * @function hasData
+     * @memberOf module:js/lang/Exception
      *
      * @returns {boolean}
      */
@@ -205,6 +220,9 @@
     };
 
     /**
+     * @instance
+     * @function getData
+     * @memberOf module:js/lang/Exception
      *
      * @returns {*|null}
      */
@@ -213,7 +231,7 @@
     };
 
     /**
-     * @exports js/lang/Exception.Exception
+     * @exports js/lang/Exception
      */
     return Exception;
 }));
