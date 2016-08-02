@@ -74,6 +74,7 @@
 
     /**
      * @typedef {Object} Message
+     * @memberOf js.lang.Exception
      *
      * @property {string} raw
      * @property {string} formatted
@@ -85,6 +86,7 @@
      *
      * @public
      * @class Exception
+     * @memberOf js.lang
      *
      * @param {string|Array|null} [message=null]
      * @param {int|null}          [id=null]
