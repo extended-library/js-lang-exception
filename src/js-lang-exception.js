@@ -1,9 +1,11 @@
-/**
+/*
  | ---------------------------------------------------------------------------------------------------------------------
  | An extendable, testable and intuitively usable **error-handling Exception class**
  | built and based on the standard, **built-in Error** object.
  | ---------------------------------------------------------------------------------------------------------------------
- *
+ */
+
+/**
  * @namespace js.lang
  *
  * @version 0.0.0
