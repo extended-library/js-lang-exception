@@ -6,7 +6,9 @@
  */
 
 /**
- * @namespace js.lang SOMENAME
+ * -
+ *
+ * @namespace js.lang
  *
  * @version 0.0.0
  *
