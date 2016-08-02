@@ -1,8 +1,9 @@
 /**
- * @overview An extendable, testable and intuitively usable **error-handling Exception class** built on
- *           the standard, built-in Error object.
+ * @file An extendable, testable and intuitively usable **error-handling Exception class** built on
+ *       the standard, **built-in Error** object.
  *
  * @namespace js.lang
+ *
  * @version 0.0.0
  *
  * @author Richard King <richrdkng@gmail.com> [GitHub]{@link https://github.com/richrdkng}
@@ -73,8 +74,8 @@
     }
 
     /**
+     * @private
      * @typedef {Object} Message
-     * @memberOf js.lang.Exception
      *
      * @property {string} raw
      * @property {string} formatted
@@ -186,7 +187,7 @@
      * @public
      * @instance
      * @function hasID
-     * @memberOf module:js/lang/Exception
+     * @memberOf js.lang.Exception
      *
      * @returns {boolean}
      */
@@ -198,7 +199,7 @@
      * @public
      * @instance
      * @function getID
-     * @memberOf module:js/lang/Exception
+     * @memberOf js.lang.Exception
      *
      * @returns {number}
      */
@@ -210,7 +211,7 @@
      * @public
      * @instance
      * @function hasData
-     * @memberOf module:js/lang/Exception
+     * @memberOf js.lang.Exception
      *
      * @returns {boolean}
      */
@@ -222,7 +223,7 @@
      * @public
      * @instance
      * @function getData
-     * @memberOf module:js/lang/Exception
+     * @memberOf js.lang.Exception
      *
      * @returns {*|null}
      */
@@ -234,7 +235,7 @@
      * @public
      * @instance
      * @function throw
-     * @memberOf module:js/lang/Exception
+     * @memberOf js.lang.Exception
      *
      * @returns {void}
      */
@@ -259,7 +260,7 @@
      * @protected
      * @instance
      * @function format
-     * @memberOf module:js/lang/Exception
+     * @memberOf js.lang.Exception
      *
      * @returns {string}
      */
