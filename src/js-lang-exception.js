@@ -83,8 +83,8 @@
     /**
      * Constructor of the Exception
      *
-     * @public
-     * @class Exception
+     * @constructor
+     * @alias module:js/lang/Exception
      *
      * @param {string|Array|null} [message=null]
      * @param {int|null}          [id=null]
@@ -265,8 +265,5 @@
         this.stack = (new Error()).stack;
     };
 
-    /**
-     * @exports js/lang/Exception
-     */
     return Exception;
 }));
