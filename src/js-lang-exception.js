@@ -6,7 +6,7 @@
  */
 
 /**
- * -
+ * More information on [JavaScript Open Standards]{@link https://github.com/jsopenstd/jsopenstd}.
  *
  * @namespace js.lang
  *
