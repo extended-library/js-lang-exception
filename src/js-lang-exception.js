@@ -149,7 +149,7 @@
      *     Exception.call(this);
      *
      *     // also can be called with custom arguments
-     *     Exception.call(this, 'Custom message', 1001, {custom : 'data'});
+     *     // Exception.call(this, 'Custom message', 1001, {custom : 'data'});
      * }
      *
      * CustomException.prototype = Object.create(Exception.prototype);
@@ -183,7 +183,7 @@
      *         super();
      *
      *         // also can be called with custom arguments
-     *         super('Custom message', 1001, {custom : 'data'});
+     *         // super('Custom message', 1001, {custom : 'data'});
      *     }
      * }
      *

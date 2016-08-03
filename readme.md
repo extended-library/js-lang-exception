@@ -116,8 +116,9 @@ npm install js-lang-exception
  function CustomException() {
      // call with the default values
      Exception.call(this);
-      // also can be called with custom arguments
-     Exception.call(this, 'Custom message', 1001, {custom : 'data'});
+      
+     // also can be called with custom arguments
+     // Exception.call(this, 'Custom message', 1001, {custom : 'data'});
  }
  
  CustomException.prototype = Object.create(Exception.prototype);
@@ -151,7 +152,7 @@ npm install js-lang-exception
           super();
   
           // also can be called with custom arguments
-          super('Custom message', 1001, {custom : 'data'});
+          // super('Custom message', 1001, {custom : 'data'});
       }
   }
   
