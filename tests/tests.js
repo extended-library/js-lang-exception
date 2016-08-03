@@ -1,3 +1,6 @@
+// ensure,that the tests are running with the --harmony flag
+require("harmonize")();
+
 var assert    = require('assert'),
     vars      = require('./variables'),
     Exception = require(vars.path);
