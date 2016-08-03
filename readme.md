@@ -98,6 +98,15 @@ npm install js-lang-exception
      custom : false,
      data   : 1492
  });
+ 
+ // custom message + custom data - ignoring custom ID by passing **null** as an argument for the ID
+ throw new Exception('With a message.', null, {custom : 'data'});
+ 
+ // custom ID + custom data - ignoring custom message by passing **null** as an argument for the message
+ throw new Exception(null, 1984, {custom : 'data'});
+ 
+ // custom data - ignoring both custom message and custom ID
+ throw new Exception(null, null, {custom : 'data'});
  ```
  
  - Advanced usage with custom exceptions
