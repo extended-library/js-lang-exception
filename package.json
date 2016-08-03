@@ -35,7 +35,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-sequence": "^0.4.5",
     "gulp-uglify": "^2.0.0",
-    "harmonize": "^1.4.4",
     "merge2": "^1.0.2",
     "semver": "^5.3.0"
   },
