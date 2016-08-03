@@ -1,7 +1,7 @@
 {
   "name": "js-lang-exception",
   "version": "1.0.0",
-  "description": "An extendable, testable and intuitively usable error-handling Exception class built on the standard, built-in Error object.",
+  "description": "An extendable, testable and intuitively usable error-handling Exception class built and based on the standard, built-in Error object.",
   "main": "dist/js-lang-exception.js",
   "license": "MIT",
   "homepage": "https://github.com/jsopenstd/js-lang-exception",

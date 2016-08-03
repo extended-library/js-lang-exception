@@ -10,7 +10,7 @@
 
 ## Synopsis
 
-An extendable, testable and intuitively usable **error-handling Exception class** built on the standard, 
+An extendable, testable and intuitively usable **error-handling Exception class** built and based on the standard, 
 built-in Error object. Written in [UMD][umd-link].
 
 Compatible with **ECMAScript 6**.
