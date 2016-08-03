@@ -1,3 +1,5 @@
+'use strict';
+
 // ensure,that the tests are running with the --harmony flag
 require("harmonize")();
 
