@@ -52,6 +52,120 @@ npm install js-lang-exception
  
 ## Usage - After Initialization
 
+ - General usage:
+ 
+ ```javascript
+ // similar to the ordinary Error
+ throw new Exception();
+ 
+ // with a custom message
+ throw new Exception('With a custom message');
+ 
+ // custom message with arguments
+ throw new Exception(['With a custom message and one argument: {}', 1]);
+ throw new Exception(['With 2 arguments: {}, {}', 1, 2]);
+ throw new Exception(['With multiple arguments: {} + {} = {}', 20, 22, 42]);
+  
+ // custom message with arguments - with direct indexing
+ // will be "With directly addressed arguments: {3} - {2} - {1}"
+ // **NOTE** - array indexing starts with 0 after the message, not 1,
+ // so here the {2} will be 3, {1} will be 2 and lastly {0} will be the number 1 from the array 
+ throw new Exception(['With directly addressed arguments: {2} - {1} - {0}', 1, 2, 3]);
+ 
+ // custom message + custom ID
+ throw new Exception('With another message', 42);
+ throw new Exception('With another message', 1001);
+ ```
+ 
+ - Advanced usage:
+ 
+ ```javascript
+ // custom message without arguments + custom ID + custom data
+ throw new Exception('With another nice message', 1404, {
+     custom : false,
+     data   : 1492
+ });
+ 
+ // **NOTE** - if an array is passed with the custom message only,
+ // it will be just as if it would be passed as a string, chill and wonder ;)
+ throw new Exception(['With another nice message'], 1404, {
+     custom : false,
+     data   : 1492
+ });
+ 
+ // custom message with arguments + custom ID + custom data
+ throw new Exception(['With another nice message with: {}, {} and {}', 1, 2, 3], 1404, {
+     custom : false,
+     data   : 1492
+ });
+ ```
+ 
+ - Advanced usage with custom exceptions
+ 
+ ```javascript
+ // subclassing - **ES5**
+ function CustomException() {
+     // call with the default values
+     Exception.call(this);
+      // also can be called with custom arguments
+     Exception.call(this, 'Custom message', 1001, {custom : 'data'});
+ }
+ 
+ CustomException.prototype = Object.create(Exception.prototype);
+ CustomException.constructor = CustomException;
+ 
+ try {
+     throw new CustomException();
+ } catch (e) {
+     // check whether custom message, custom ID and custom data was passed
+     console.log(e.hasMessage());
+     console.log(e.hasID());
+     console.log(e.hasData());
+     
+     // get custom message, ID and data
+     console.log(e.getMessage());
+     console.log(e.getID());
+     console.log(e.getData());
+     
+     // you can check them, these will be all === true
+     console.log(e instanceof CustomException);
+     console.log(e instanceof Exception);
+     console.log(e instanceof Error);
+ }
+ ```
+ 
+ ```javascript
+  // subclassing - **ES6**
+  class CustomException extends Exception {
+      constructor() {
+          // call with the default values
+          super();
+  
+          // also can be called with custom arguments
+          super('Custom message', 1001, {custom : 'data'});
+      }
+  }
+  
+  try {
+      throw new CustomException();
+  } catch (e) {
+      // check whether custom message, custom ID and custom data was passed
+      console.log(e.hasMessage());
+      console.log(e.hasID());
+      console.log(e.hasData());
+      
+      // get custom message, ID and data
+      console.log(e.getMessage());
+      console.log(e.getID());
+      console.log(e.getData());
+      
+      // you can check them, these will be all === true
+      console.log(e instanceof CustomException);
+      console.log(e instanceof Exception);
+      console.log(e instanceof Error);
+  }
+  ```
+
 ## Documentation
 
 Check the source 

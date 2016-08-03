@@ -42,6 +42,10 @@ module.exports = {
         'no-negated-condition' : 'off',
         'guard-for-in' : 'off',
         'no-lonely-if' : 'off',
+        'no-self-compare': 'off',
+        'no-inline-comments' : 'off',
+        'lines-around-comment' : 'off',
+        'no-underscore-dangle': 'off',
         'max-params': [
             'error', 5
         ],
