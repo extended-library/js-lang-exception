@@ -10,7 +10,7 @@
  *
  * @namespace js.lang
  *
- * @version 0.0.0
+ * @version 1.0.0
  *
  * @author Richard King <richrdkng@gmail.com> [GitHub]{@link https://github.com/richrdkng}
  * @license [MIT]{@link https://github.com/jsopenstd/js-partial-foreach/blob/master/license.md}
