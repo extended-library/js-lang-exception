@@ -1,6 +1,6 @@
 {
   "name": "js-lang-exception",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An extendable, testable and intuitively usable error-handling Exception class built and based on the standard, built-in Error object.",
   "main": "dist/js-lang-exception.js",
   "license": "MIT",

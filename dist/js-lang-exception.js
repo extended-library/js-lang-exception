@@ -10,7 +10,7 @@
  *
  * @namespace js.lang
  *
- * @version 1.0.0
+ * @version 1.0.1
  *
  * @author Richard King <richrdkng@gmail.com> [GitHub]{@link https://github.com/richrdkng}
  * @license [MIT]{@link https://github.com/jsopenstd/js-partial-foreach/blob/master/license.md}
@@ -42,9 +42,11 @@
      * @private
      * @typedef {Object} Message
      *
-     * @property {string} raw
-     * @property {string} formatted
-     * @property {Array}  args
+     * @property {string} raw       - The source/raw string with the unfilled '{}'.
+     *                                This string is used to format the "formatted" string.
+     *
+     * @property {string} formatted - The formatted string filled with arguments.
+     * @property {Array}  args      - The arguments to fill the string with.
      */
 
     /**
@@ -52,8 +54,8 @@
      * on the standard, **built-in Error** object.
      *
      * A custom message can be used for the Exception, with easy message formatting capabilities similar to Python's
-     * **'{}'.format()** function by using a string message containing '{}' and providing additional data to fill the
-     * string with.
+     * '{}'.format() function by using a string message containing '{}' and providing additional data
+     * to fill the string with.
      *
      * A custom ID and also additional, custom data can be set with the exception for further identification and usage.
      *
@@ -62,33 +64,27 @@
      * @memberOf js.lang
      *
      * @param {string|Array|null} [message] - The custom message of the exception.
-     *
      *                                        If it is a string, no additional formatting will be applied to
      *                                        the custom message.
-     *
      *                                        If it is an array, the first element of the array will be used as the
      *                                        source message, that will be used for additional formatting.
      *                                        The following elements in the array will be used for filling up the
      *                                        custom source message. To index custom arguments, use '{}' or '{#}'.
-     *
      *                                        To leave the message with the default value or in case of
      *                                        inheritance (extending the Exception), unchanged, set it to **null**.
      *
      * @param {int|null} [id] - A custom ID for the Exception.
-     *
      *                          To leave the message with the default value or in case of inheritance
      *                          (extending the Exception), unchanged, set it to **null**.
      *
      * @param {*|null} [data] - Custom data, which will be stored and can be used. If it is **null or undefined**,
      *                          it will be skipped and will not be stored.
-     *
      *                          To leave the message with the default value or in case of inheritance
      *                          (extending the Exception), unchanged, set it to **null**.
      *
      * @param {boolean} [throwImmediately=true] - Sets whether the Exception should be thrown immediately
      *                                            after the instantiation. The Exception by default is automatically
      *                                            thrown after instantiation.
-     *
      *                                            **This option is mostly used for unit testing and
      *                                            debugging purposes.**
      *
@@ -135,6 +131,16 @@
      *     custom : false,
      *     data   : 1492
      * });
+     *
+     * @example
+     * // custom message + custom data - ignoring custom ID by passing **null** as an argument for the ID
+     * throw new Exception('With a message.', null, {custom : 'data'});
+     *
+     * // custom ID + custom data - ignoring custom message by passing **null** as an argument for the message
+     * throw new Exception(null, 1984, {custom : 'data'});
+     *
+     * // custom data - ignoring both custom message and custom ID
+     * throw new Exception(null, null, {custom : 'data'});
      *
      * @example
      * // subclassing - ES5
